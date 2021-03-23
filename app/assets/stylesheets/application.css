@@ -45,3 +45,24 @@ footer {
     margin-top: 20px;
     text-align: center;
 }
+
+#books-index {
+    text-align: center;
+}
+
+#books-index img{
+    width: 100%;
+    padding: 3px;
+    border: 1px #ccc solid;
+}
+
+#books-index h3 {
+    height: 50px;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+#books-index .btn{
+    display: block;
+    margin-top: 20px;
+}
