@@ -44,15 +44,18 @@
       </div>
     </nav>
     <header class="pt-3">
-      <h3><%= @page_title? @page_title:'Welcome to Bookstore' %></h3>
+      <h3 class="container"><%= @page_title? @page_title:'Welcome to Bookstore' %></h3>
     </header>
     <div class="row">
       <div class="col-md-8">
         <%= yield %>
       </div>
       <div class="col-md-4">
-        Here goes the side part which occupires 4 col.
+        <%= render 'partials/sidebar' %>
       </div>
     </div>
+    <footer>
+      <p>Copyright &copy; 2021 All Rights Reserved </p>
+    </footer>
   </body>
 </html>
