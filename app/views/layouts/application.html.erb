@@ -31,6 +31,14 @@
           </ul>
           <ul class="navbar-nav mb-2 mb-md-0 navbar-right">
             <li class="nav-item dropdown nav">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Manage</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                <li><%= link_to 'Categories',categories_path, class:"dropdown-item" %></li>
+                <li><%= link_to 'Authors',authors_path,class:"dropdown-item" %></li>
+                <li><%= link_to 'Publishers',publishers_path,class:"dropdown-item" %></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown nav">
               <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Add New</a>
               <ul class="dropdown-menu" aria-labelledby="dropdown01">
                 <li><%= link_to 'Book',new_book_path, class:"dropdown-item" %></li>
