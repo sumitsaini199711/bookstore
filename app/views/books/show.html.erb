@@ -1,22 +1,24 @@
 <div id="books-show">
-  <h2>Ruby on Rails</h2>
+  <h2><%= @book.title %></h2>
   <div class="books-show-left">
-    <%= image_tag('covers/ruby_on_rails_power.jpg') %>
+    <%= image_tag @book.coverpath, style: 'height:100%;width:250px;' %>
   </div>
   <div class="books-show-right">
     <h3>Book info:</h3>
     <ul>
-      <li><strong>Category:</strong> Ruby on Rails</li>
-      <li><strong>Author:</strong> Sumit saini</li>
-      <li><strong>Publisher:</strong> asd</li>
-      <li><strong>Year:</strong> 1234</li>
-      <li><strong>ISBN:</strong> 1234</li>
-      <li><strong>Format:</strong> wert</li>
-      <li><strong>Pages:</strong> 500</li>
+      <li><strong>Category:</strong> <%= @book.category.name %></li>
+      <li><strong>Author:</strong> <%= @book.author.first_name %> <%= @book.author.last_name %></li>
+      <li><strong>Publisher:</strong> <%= @book.publisher.name %></li>
+      <li><strong>Year:</strong> <%= @book.year %></li>
+      <li><strong>ISBN:</strong> <%= @book.isbn %></li>
+      <li><strong>Format:</strong> <%= @book.format %></li>
+      <li><strong>Pages:</strong> <%= @book.pages %></li>
     </ul>
-    <%=link_to "Buy For 500", "#", class:'btn btn-success',target:'_blank' %>
+    <%=link_to "Buy For "+@book.price, @book.buy, class:'btn btn-success',target:'_blank' %>
   </div>
   <div class="clearfix"></div>
   <h4>Excerpt</h4>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellat illum sunt animi non voluptate enim eligendi doloribus atque, nihil earum suscipit laboriosam. Similique doloribus porro excepturi? Fugit, ratione ipsa?</p>
+  <p><%= @book.excerpt %></p>
+  <h3>Admin Functions</h3>
+  <%= link_to 'Edit', edit_book_path(@book.id) %> | <%= link_to 'Delete', book_path(@book), method: :delete, data: {confirm: 'Are you sure?'} %>
 </div>
