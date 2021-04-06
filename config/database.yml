@@ -31,4 +31,4 @@ production:
   adapter: mysql2
   database: bookstore_development
   username: bookstore
-  password: bookstoredatabase: db/production.sqlite3
+  password: bookstore
