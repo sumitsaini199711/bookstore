@@ -27,8 +27,4 @@ test:
 
 production:
   <<: *default
-  host: ec2-54-225-190-241.compute-1.amazonaws.com
-  username: lnninfnystdaca
-  database: deokmm4sfhjhlp
-  port: 5432
-  password: 3e8bef440646f4cdd59a366440579b9d2d4a47b3499a441262f8198a8dd1fdbe
+  database: <%= ENV['DATABASE_URL'] =>
