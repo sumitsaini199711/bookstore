@@ -27,8 +27,8 @@ test:
   password: bookstore
 
 production:
-    <<: *default
+  <<: *default
   adapter: mysql2
-  database: bookstore_test
+  database: bookstore_development
   username: bookstore
-  password: bookstore
+  password: bookstoredatabase: db/production.sqlite3
